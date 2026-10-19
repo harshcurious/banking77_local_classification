@@ -7,7 +7,13 @@ authors = [
     { name = "Harsh Kumar", email = "eharshkmr@gmail.com" }
 ]
 requires-python = ">=3.13"
-dependencies = []
+dependencies = [
+    "datasets>=5.1.0",
+    "marimo[recommended]>=0.25.1",
+    "pandas[compression,performance]>=3.0.6",
+    "vegafusion>=2.0.3",
+    "vl-convert-python>=1.9.0.post1",
+]
 
 [project.scripts]
 banking77-local-classification = "banking77_local_classification:main"
@@ -15,3 +21,9 @@ banking77-local-classification = "banking77_local_classification:main"
 [build-system]
 requires = ["uv_build>=0.13.1,<0.14.0"]
 build-backend = "uv_build"
+
+[dependency-groups]
+dev = [
+    "mcp>=2.0.0",
+    "pyrefly"
+]
